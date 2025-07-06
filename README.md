@@ -14,7 +14,7 @@
 
 ```shell
 #验证代码规范
-./mvnw.cmd validate
+.\mvnw.cmd validate
 # 格式化
-./mvnw.cmd spotless:apply
+.\mvnw.cmd spotless:apply
 ```
