@@ -40,10 +40,7 @@
 		<junit.version>5.13.3</junit.version>
 		<assertj.version>3.27.3</assertj.version>
 		<checkstyle.version>10.18.2</checkstyle.version>
-		<spotless.skip>false</spotless.skip>
 		<spotless.version>2.44.5</spotless.version>
-		<spotless.scalafmt.version>3.4.3</spotless.scalafmt.version>
-		<spotless.delimiter>package</spotless.delimiter>
 	</properties>
 
 	<dependencies>
