@@ -35,7 +35,6 @@
 	<properties>
 		<project.build.encoding>UTF-8</project.build.encoding>
 		<java.version>17</java.version>
-		<spotless.version>2.44.5</spotless.version>
 		<jspecify.version>1.0.0</jspecify.version>
 		<junit.version>5.13.3</junit.version>
 		<assertj.version>3.27.3</assertj.version>
