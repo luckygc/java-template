@@ -4,11 +4,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>github.luckygc</groupId>
-	<artifactId>java-base-template</artifactId>
-	<version>1.1.0</version>
-	<name>java-base-template</name>
-	<description>java-base-template</description>
+	<groupId>com.github.luckygc</groupId>
+	<artifactId>java-template</artifactId>
+	<version>1.2.0</version>
+	<name>java-template</name>
+	<description>java-template</description>
 
 	<licenses>
 		<license>
@@ -43,11 +43,6 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.puppycrawl.tools</groupId>
-			<artifactId>checkstyle</artifactId>
-			<version>${checkstyle.version}</version>
-		</dependency>
 		<dependency>
 			<groupId>org.jspecify</groupId>
 			<artifactId>jspecify</artifactId>
@@ -109,46 +104,12 @@
 					</execution>
 				</executions>
 				<configuration>
+					<configLocation>/tools/maven/custom_google_checks.xml</configLocation>
 					<suppressionsLocation>/tools/maven/suppressions.xml</suppressionsLocation>
 					<includeTestSourceDirectory>true</includeTestSourceDirectory>
-					<configLocation>/tools/maven/checkstyle.xml</configLocation>
-					<logViolationsToConsole>true</logViolationsToConsole>
 					<failOnViolation>true</failOnViolation>
+					<outputFile>checkstyle-report.xml</outputFile>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>com.diffplug.spotless</groupId>
-				<artifactId>spotless-maven-plugin</artifactId>
-				<version>${spotless.version}</version>
-				<configuration>
-					<java>
-						<googleJavaFormat>
-							<version>1.27.0</version>
-							<style>AOSP</style>
-						</googleJavaFormat>
-
-						<!-- \# refers to the static imports -->
-						<importOrder>
-							<order>${project.groupId},javax,jakarta,java, \#</order>
-						</importOrder>
-
-						<removeUnusedImports/>
-
-						<licenseHeader>
-							<file>LICENSE_HEADER</file>
-							<delimiter>package</delimiter>
-						</licenseHeader>
-					</java>
-				</configuration>
-				<executions>
-					<execution>
-						<id>spotless-check</id>
-						<phase>validate</phase>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

@@ -4,17 +4,11 @@
 
 ### ide
 
-插件google-java-format，选择`aosp`4缩进样式;
-插件checkstyle-idea，checkstyle-version版本10.18.2，新增配置使用/tools/maven/下checkstyle.xml，
+插件checkstyle-idea，配置,/tools/maven/custom_google_checks.xml，
 范围所有包含测试
+
+代码样式 tools/maven/intellij-custom-java-google-style.xml
 
 ### 测试
 
 使用junit5加assertj，断言使用assertj
-
-```shell
-#验证代码规范
-.\mvnw.cmd validate
-# 格式化
-.\mvnw.cmd spotless:apply
-```
