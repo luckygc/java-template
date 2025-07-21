@@ -36,10 +36,10 @@
 		<project.build.encoding>UTF-8</project.build.encoding>
 		<java.version>17</java.version>
 		<jspecify.version>1.0.0</jspecify.version>
+        <slf4j.version>2.0.17</slf4j.version>
 		<junit.version>5.13.3</junit.version>
 		<assertj.version>3.27.3</assertj.version>
 		<checkstyle.version>10.26.1</checkstyle.version>
-		<spotless.version>2.44.5</spotless.version>
 	</properties>
 
 	<dependencies>
@@ -48,6 +48,12 @@
 			<artifactId>jspecify</artifactId>
 			<version>${jspecify.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
